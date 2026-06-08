@@ -1,0 +1,8 @@
+[package]
+name = "ytdlp-shim"
+version = "0.1.59"
+authors = ["Fox Box <foxboxpdx@gmail.com>"]
+edition = "2024"
+
+[profile.release]
+panic = "abort"
