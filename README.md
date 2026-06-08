@@ -1,19 +1,19 @@
 # YTDLP-SHIM
 A thin helper program to sit between VRChat and YT-DLP.exe in order to prevent
-the latter from returning media URLs that cause VRChat to segfault and exit
-in Linux.
+the latter from returning media URLs that cause VRChat to segfault in Linux.
 
 ## Usage
 * Rename `$VRCHAT_ROOT/Tools/yt-dlp.exe` to `real-yt-dlp.exe`
 * Copy the compiled `ytdlp-shim.exe` executable to `$VRCHAT_ROOT/Tools/` and rename it to `yt-dlp.exe`
 * Force the shim executable to be read-only (`chmod u-w yt-dlp.exe`) to prevent VRChat from overwriting it
-* Hopefully enjoy media players without worrying about Segfault crashes
+* Hopefully enjoy media players without worrying about segfault crashes
 
 ## Building
 Prerequisites:
 * Rust >1.90
 * Windows target for Rust (`rustup target add x86_64-pc-windows-gnu`)
 * The MinGW toolchain (`mingw-w64` on Debian-based distros, `mingw-w64-gcc` on Arch-based distros)
+
 To actually compile it:
 * `cargo build --target x86_64-pc-windows-gnu --release`
 * Resulting binary should be in `target/x86_64-pc-windows-gnu/release/ytdlp-shim.exe`
